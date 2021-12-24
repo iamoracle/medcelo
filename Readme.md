@@ -8,5 +8,12 @@ Therefore, as individuals, we must come together to build a fully transparent sy
 
 To ensure transparency and prevent scams, we've mandated that fundraisers provide medical reports or substantial evidence before being listed on our platform. The choice of technologies used in this project ensure that we can rapidly prototype and deploy our concept and improve usablity. Over the years, mobile technology has become a dominating force and more users access the internet through their mobile device. Therefore, with Celo - a mobile-first blockchain technology - we can do more.
 
+### DEMO
+
+1. clone repo 
+2. Run npm run install
+3. Run npm run start
+
+
 #### License
 This repository includes an [unlicensed](http://unlicense.org/) statement though you may want to [choose a different license](https://choosealicense.com/).
