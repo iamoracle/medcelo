@@ -10,7 +10,7 @@ To ensure transparency and prevent scams, we've mandated that fundraisers provid
 
 ### DEMO
 
-Go to https://ivory-locust-1biwd7ql.ws-eu25.gitpod.io/
+Go to https://gitpod.io/#https://github.com/godlyprogrammer/medcelo
 
 1. clone repo 
 2. Run npm run install
