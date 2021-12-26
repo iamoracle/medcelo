@@ -10,9 +10,9 @@ To ensure transparency and prevent scams, we've mandated that fundraisers provid
 
 ### DEMO
 
-Go to https://gitpod.io/#https://github.com/godlyprogrammer/medcelo
+Go to https://gitpod.io/#https://github.com/godlyprogrammer/medcelo or clone this repo locally on VSCODE
 
-1. clone repo 
+1. Open terminal
 2. Run npm run install
 3. Run npm run start
 
