@@ -38,6 +38,20 @@ contract FundRaising {
     
     address owner;
 
+    modifier isOwnerOrActive(uint _index){
+
+    require(campaigns[_index].active || msg.sender == owner, "campaign is inactive");
+
+        _;
+    }
+
+      modifier isActive(uint _index){
+
+     require(msg.sender == owner, 'only owner can modify campaign');
+        _;
+    }
+
+
     constructor() {
         owner = msg.sender;
     }
@@ -65,7 +79,7 @@ contract FundRaising {
         totalCampaigns++;
     }
 
-    function fetchCampaign(uint _index) public view returns (
+    function fetchCampaign(uint _index) isOwnerOrActive(_index) public view returns (
         address payable,
         string memory,
         string[5] memory,
@@ -73,8 +87,7 @@ contract FundRaising {
         string memory
     ) {
 
-        require(campaigns[_index].active || msg.sender == owner, "campaign is inactive");
-
+       
         return (
             campaigns[_index].fundraiser,
             campaigns[_index].title, 
@@ -84,15 +97,13 @@ contract FundRaising {
         );
     }
 
-     function fetchCampaignMeta(uint _index) public view returns (
+     function fetchCampaignMeta(uint _index)  isOwnerOrActive(_index) public view returns (
         uint,
         uint,
         uint,
         uint256,
         bool
     ) {
-
-        require(campaigns[_index].active || msg.sender == owner, "campaign is inactive");
 
         return (
             campaigns[_index].supporters,
@@ -131,10 +142,7 @@ contract FundRaising {
 
     }
 
-    function activateCampaign(uint _index) public {
-
-        require(msg.sender == owner, 'only owner can modify campaign');
-
+    function activateCampaign(uint _index) isActive(_index) public {
         campaigns[_index].active = true; 
 
     }
